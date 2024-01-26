@@ -1,9 +1,10 @@
 // main.js
 
 // Modules to control application life and create native browser window
+require('dotenv').config();
 const { app, BrowserWindow } = require('electron')
 const path = require('node:path')
-
+const GITHUB_TOKEN = process.env.GITHUB_TOKEN;
 const createWindow = () => {
   // Create the browser window.
   const mainWindow = new BrowserWindow({
